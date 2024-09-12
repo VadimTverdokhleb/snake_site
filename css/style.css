@@ -1,0 +1,123 @@
+header {
+    height: 100px;
+    background-image: linear-gradient(to right, rgb(114, 68, 68), rgb(223, 152, 98), rgb(114, 68, 68));
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; 
+    background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.3), transparent 70%),
+                radial-gradient(circle at top right, rgba(0, 0, 0, 0.3), transparent 70%),
+                radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.3), transparent 70%),
+                radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.3), transparent 70%);
+    pointer-events: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.nav_menu {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100px;
+    column-gap: 5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_menu a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #f7d7be;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.nav_menu a:hover {
+    color: #ffd1a5;
+    font-size: 1.4em;
+}
+main{
+    background-image: url(../img/background_main.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: -40px;
+    padding-bottom: 50px;
+    position: relative;
+    
+}
+.snake_title{
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    color: #ffecc7;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    text-shadow: 
+        -1px -1px 2px rgba(0, 0, 0, 0.7),
+        1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+.books {
+    display: grid;
+    width: 920px;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    gap: 5%; /* Отступы между элементами */
+    justify-content: center; /* Центрирование всего контента */
+    padding-top: 20%;
+    padding-left: 25%;
+}
+
+.books-block {
+    display: flex;
+    width: 270px;
+    flex-direction: column; /* Картинка над названием */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.books-block:hover {
+    transform: scale(1.2);
+}
+
+.books-block img {
+    display: block;
+    margin-bottom: 10px;
+    border: 2px solid;
+}
+
+.books-link {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    color: #f0e68c; /* Цвет текста */
+    background-color: rgba(34, 34, 34, 0.7); /* Полупрозрачный фон: тёмный с прозрачностью 70% */
+    padding: 10px 15px; /* Отступы внутри рамки */
+    border-radius: 15px; /* Закруглённые углы */
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.books-link:hover {
+    background-color: rgba(34, 34, 34, 0.9); /* Чуть менее прозрачный фон при наведении */
+    color: #ffd1a5; /* Светлее текст при наведении */
+}
