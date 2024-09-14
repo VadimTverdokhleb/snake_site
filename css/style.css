@@ -121,3 +121,17 @@ main{
     background-color: rgba(34, 34, 34, 0.9); /* Чуть менее прозрачный фон при наведении */
     color: #ffd1a5; /* Светлее текст при наведении */
 }
+footer {
+    display: flex;
+    height: 150px;
+    background-color: rgb(39, 37, 37);
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8em;
+    color: #f0e68c;
+}
+
+.copyrights {
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
